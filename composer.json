@@ -1,0 +1,37 @@
+{
+    "name": "larium/http-responder",
+    "description": "Responder for http messages",
+    "keywords": ["responder", "http", "payload"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Kollaros",
+            "email": "andreas@larium.net"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "psr/http-factory": "~1.0.1",
+        "larium/template-bridge": "~0.0.1",
+        "aura/payload-interface": "~3.1.0",
+        "shrikeh/teapot": "~2.3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.2.4",
+        "zendframework/zend-diactoros": "~2.1.3",
+        "aura/payload": "~3.0.1",
+        "twig/twig": "~2.11.3"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Larium\\Responder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Larium\\Responder\\": "tests/"
+        }
+    }
+}
