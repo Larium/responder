@@ -73,8 +73,8 @@ class Responder
         $this->setStatusForPayload();
 
         if ($this->payload) {
-            $this->response = $this->formatter->formatResponse($this->response);
             $this->response->getBody()->write($this->formatter->format($payload));
+            $this->response = $this->formatter->formatResponse($this->response);
         }
 
         return $this->response;
