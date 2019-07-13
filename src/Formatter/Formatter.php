@@ -9,7 +9,8 @@ use Psr\Http\Message\ResponseInterface;
 
 interface Formatter
 {
-    public function format(ReadablePayloadInterface $payload): string;
-
-    public function formatResponse(ResponseInterface $response): ResponseInterface;
+    public function format(
+        ReadablePayloadInterface $payload,
+        ResponseInterface $response
+    ): ResponseInterface;
 }

@@ -36,11 +36,7 @@ class HtmlFormatterTest extends TestCase
             'template' => 'block.html.twig',
         ]);
 
-        $this->response = $this->formatter->formatResponse($this->response);
-        $content = $this->formatter->format($payload);
-
-        $this->response->getBody()->write($content);
-
+        $this->response = $this->formatter->format($payload, $this->response);
         $body = $this->response->getBody()->__toString();
 
         $expected = <<<CONTENT

@@ -17,17 +17,18 @@ class HtmlFormatter implements Formatter
         $this->template = $template;
     }
 
-    public function format(ReadablePayloadInterface $payload): string
-    {
+    public function format(
+        ReadablePayloadInterface $payload,
+        ResponseInterface $response
+    ): ResponseInterface {
         $params = $payload->getOutput();
         $extra = $payload->getExtras();
         $params['input'] = $payload->getInput();
 
-        return $this->template->render($extra['template'], $params);
-    }
+        $content = $this->template->render($extra['template'], $params);
+        $response->getBody()->write($content);
 
-    public function formatResponse(ResponseInterface $response): ResponseInterface
-    {
-        return $response->withHeader('Content-Type', 'text/html');
+        return $response->withHeader('Content-Type', 'text/html')
+                        ->withHeader('Content-Length', (string) strlen($content));
     }
 }
