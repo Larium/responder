@@ -8,7 +8,7 @@ use Aura\Payload\Payload;
 use Aura\Payload_Interface\PayloadStatus;
 use Larium\Bridge\Template\TwigTemplate;
 use PHPUnit\Framework\TestCase;
-use Zend\Diactoros\ResponseFactory;
+use Laminas\Diactoros\ResponseFactory;
 
 class HtmlFormatterTest extends TestCase
 {

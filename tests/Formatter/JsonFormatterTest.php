@@ -7,7 +7,7 @@ namespace Larium\Responder\Formatter;
 use Aura\Payload\Payload;
 use Aura\Payload_Interface\PayloadStatus;
 use PHPUnit\Framework\TestCase;
-use Zend\Diactoros\ResponseFactory;
+use Laminas\Diactoros\ResponseFactory;
 
 class JsonFormatterTest extends TestCase
 {

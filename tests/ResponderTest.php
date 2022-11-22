@@ -10,9 +10,8 @@ use Larium\Bridge\Template\TwigTemplate;
 use Larium\Responder\Formatter\HtmlFormatter;
 use PHPUnit\Framework\TestCase;
 use Teapot\StatusCode;
-use Zend\Diactoros\RequestFactory;
-use Zend\Diactoros\ResponseFactory;
-use Zend\Diactoros\ServerRequestFactory;
+use Laminas\Diactoros\ResponseFactory;
+use Laminas\Diactoros\ServerRequestFactory;
 
 class ResponderTest extends TestCase
 {
