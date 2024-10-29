@@ -21,7 +21,7 @@
         "phpunit/phpunit": "^10.0",
         "laminas/laminas-diactoros": "^2.25",
         "aura/payload": "~3.0.1",
-        "twig/twig": "~3.4.3"
+        "twig/twig": "~3.14"
     },
     "minimum-stability": "stable",
     "autoload": {
